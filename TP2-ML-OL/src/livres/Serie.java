@@ -29,4 +29,20 @@ public class Serie {
     public List<Ouvrage> getOuvrages() {
         return ouvrages;
     }
+    public void ajouterOuvrage(Ouvrage ouvrage) {
+        if (ouvrage != null) {
+            ouvrages.add(ouvrage);
+        } else {
+            System.out.println("Un ouvrage valide doit être spécifié");
+        }
+    }
+
+    public boolean retirerOuvrage(Ouvrage ouvrage) {
+        return ouvrages.remove(ouvrage);
+    }
+
+    @Override
+    public String toString() {
+        return "Série : " + nom + " (" + ouvrages.size() + " ouvrage(s)";
+    }
 }
