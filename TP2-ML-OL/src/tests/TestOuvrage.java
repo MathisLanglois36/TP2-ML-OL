@@ -5,6 +5,8 @@ import java.util.List;
 
 import livres.Ouvrage;
 import livres.Auteur;
+import livres.Pays;
+import livres.Serie;
 
 /**
  * CoursPOO 1
@@ -101,7 +103,30 @@ public class TestOuvrage {
         resultat = bibliotheque.trouverOuvrages(new Auteur("Jacques", "Beaulieu", "France"));
         System.out.println("Livres de Jacques: " + resultat);
     }
+    public void testSerie(){
 
+        Pays etatsunis = new Pays("États-Unis", "USA");
 
+        Auteur king = new Auteur("Stephen", "King", etatsunis);
+
+        Ouvrage it      = new Ouvrage("Ça 1", king, Ouvrage.Format.PAPIER, null, 5);
+        Ouvrage shining = new Ouvrage("Shining", king, Ouvrage.Format.PAPIER, null, 3);
+        Ouvrage misery  = new Ouvrage("Misery", king, Ouvrage.Format.PAPIER, null, 4);
+
+        // Créer une série
+        Serie serie = new Serie("Stephen King Horreur");
+        System.out.println("Série créée : " + serie);
+
+        serie.ajouterOuvrage(it);
+        serie.ajouterOuvrage(shining);
+        serie.ajouterOuvrage(misery);
+        System.out.println("Après ajout de 3 ouvrages : " + serie);
+
+        // retire un ouvrage existant
+        boolean retire = serie.retirerOuvrage(shining);
+        System.out.println("Retrait de Shining (doit être vrai) : " + retire);
+        System.out.println("Après retrait : " + serie);
+
+}
 }
 
