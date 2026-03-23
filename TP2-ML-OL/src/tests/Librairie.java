@@ -6,7 +6,8 @@ import livres.Ouvrage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Librairie {
+public class
+Librairie {
     private List<Auteur> auteurs  = new ArrayList<>();
     private List<Ouvrage> ouvrages = new ArrayList<>();
 
