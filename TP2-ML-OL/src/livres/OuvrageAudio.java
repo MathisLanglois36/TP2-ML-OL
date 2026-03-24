@@ -1,0 +1,18 @@
+package livres;
+
+import java.time.LocalDate;
+
+public class OuvrageAudio extends Ouvrage{
+
+    public enum FormatAudio {
+        NUMERIQUE, ANALOGIQUE
+    }
+    private int durerMinutes;
+    private FormatAudio formatAudio;
+
+    public OuvrageAudio(String titre, Auteur auteur, Format type, LocalDate date, int nombreExemplaires, int durerMinutes, FormatAudio formatAudio) {
+        super(titre, auteur, type, date, nombreExemplaires);
+        this.durerMinutes = durerMinutes;
+        this.formatAudio = formatAudio;
+    }
+}
