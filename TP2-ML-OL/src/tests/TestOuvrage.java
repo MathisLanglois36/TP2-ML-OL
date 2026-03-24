@@ -20,6 +20,8 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.testPays();
+        test.testSerie();
     }
 
 
