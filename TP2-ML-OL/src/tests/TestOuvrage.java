@@ -6,6 +6,7 @@ import java.util.List;
 import livres.Ouvrage;
 import livres.Auteur;
 import livres.Pays;
+import livres.Serie;
 
 /**
  * CoursPOO 1
@@ -124,9 +125,14 @@ public class TestOuvrage {
         Pays p4 = new Pays("Mexique", "mex"); // minuscules
         Pays p5 = new Pays("Allemagne", "DEUT"); // trop long
 
+
+
+        Pays etatsunis = new Pays("États-Unis", "USA");
+
         System.out.println("Pays invalide 1: " + p3);
         System.out.println("Pays invalide 2: " + p4);
         System.out.println("Pays invalide 3: " + p5);
+        Auteur king = new Auteur("Stephen", "King", etatsunis);
 
         // Test equals
         Pays p6 = new Pays("Canada", "CAN");
@@ -136,6 +142,30 @@ public class TestOuvrage {
         // Test avec Auteur
         Auteur auteur = new Auteur("Albertine", "Tremblay", p1);
         System.out.println("Auteur avec pays: " + auteur);
-    }
+}
+    public void testSerie(){
+        Pays etatsunis = new Pays("États-Unis", "USA");
+        Auteur king = new Auteur("Stephen", "King", etatsunis);
+
+        Ouvrage it      = new Ouvrage("Ça 1", king, Ouvrage.Format.PAPIER, null, 5);
+        Ouvrage shining = new Ouvrage("Shining", king, Ouvrage.Format.PAPIER, null, 3);
+        Ouvrage misery  = new Ouvrage("Misery", king, Ouvrage.Format.PAPIER, null, 4);
+
+        // Créer une série
+        Serie serie = new Serie("Stephen King Horreur");
+        System.out.println("Série créée : " + serie);
+
+        serie.ajouterOuvrage(it);
+        serie.ajouterOuvrage(shining);
+        serie.ajouterOuvrage(misery);
+        System.out.println("Après ajout de 3 ouvrages : " + serie);
+
+        // retire un ouvrage existant
+        boolean retire = serie.retirerOuvrage(shining);
+        System.out.println("Retrait de Shining (doit être vrai) : " + retire);
+        System.out.println("Après retrait : " + serie);
+
+}
+
 }
 
