@@ -35,4 +35,8 @@ public class OuvrageVideo extends Ouvrage {
     public void setTailleMb(double tailleMb) {
         this.tailleMb = tailleMb;
     }
+    @Override
+    public String toString() {
+      return super.toString() + "nombre de minutes" + durerMinutes + "taille mb" + tailleMb;
+    }
 }

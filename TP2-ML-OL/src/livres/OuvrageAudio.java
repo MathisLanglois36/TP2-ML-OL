@@ -26,4 +26,8 @@ public class OuvrageAudio extends Ouvrage{
     public void setFormatAudio(FormatAudio formatAudio) {
         this.formatAudio = formatAudio;
     }
+    @Override
+    public String toString() {
+        return super.toString() + "nombre de minutes" + durerMinutes + "format audio" + formatAudio;
+    }
 }

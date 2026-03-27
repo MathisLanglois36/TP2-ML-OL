@@ -25,9 +25,12 @@ public class Pays {
     public void setCode(String code) {
         if (code != null && code.matches("[A-Z]{3}"))
             this.code = code;
-        else{ throw new IllegalArgumentException("Erreur il doit y avoir exacteemnt 3 majuscules")
-                ;
+        else{ System.out.println("Code invalide: " + code );
+            this.code = "XXX";
         }
     }
-
+@Override
+public String toString(){
+    return "Nom: " + nom + ", Code: " + code;
+}
 }

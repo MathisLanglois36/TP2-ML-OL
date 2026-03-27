@@ -15,4 +15,8 @@ public class OuvragePapier extends Ouvrage {
         super(titre, auteur);
 
     }
+    @Override
+    public String toString() {
+        return super.toString() + "nombre de pages: " + nombrePages;
+    }
 }

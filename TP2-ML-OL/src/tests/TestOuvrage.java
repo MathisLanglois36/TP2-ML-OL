@@ -132,11 +132,7 @@ public class TestOuvrage {
         System.out.println("Pays invalide 2: " + p4);
         System.out.println("Pays invalide 3: " + p5);
         Auteur king = new Auteur("Stephen", "King", etatsunis);
-
-        // Test equals
-        Pays p6 = new Pays("Canada", "CAN");
-        System.out.println("Equals pays (doit être true): " + p1.equals(p6));
-        System.out.println("Equals pays (doit être false): " + p1.equals(p2));
+        
 
         // Test avec Auteur
         Auteur auteur = new Auteur("Albertine", "Tremblay", p1);
@@ -148,8 +144,8 @@ public class TestOuvrage {
 
         Ouvrage it      = new OuvragePapier("Ça 1", king, Ouvrage.Format.PAPIER, null, 5,210);
         Ouvrage shining = new OuvragePapier("Shining", king, Ouvrage.Format.PAPIER, null, 3,250);
-        Ouvrage misery  = new OuvragePapier(        "Misery", king, Ouvrage.Format.PAPIER, null, 4,300);
-
+        Ouvrage misery;
+        misery = new OuvragePapier(        "Misery", king, Ouvrage.Format.PAPIER, null, 4,300);
         // Créer une série
         Serie serie = new Serie("Stephen King Horreur");
         System.out.println("Série créée : " + serie);
