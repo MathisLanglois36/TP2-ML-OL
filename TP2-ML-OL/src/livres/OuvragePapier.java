@@ -11,6 +11,8 @@ public class OuvragePapier extends Ouvrage {
         super(titre, auteur, type, date, nombreExemplaires);
         this.nombrePages = nombrePages;
     }
-
+public OuvragePapier(String titre, Auteur auteur) {
+        super(titre, auteur);
+}
 
 }

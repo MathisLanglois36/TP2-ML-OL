@@ -2,6 +2,7 @@ package tests;
 
 import livres.Auteur;
 import livres.Ouvrage;
+import livres.OuvragePapier;
 import livres.Pays;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ Librairie {
         auteurs.add(john);
         auteurs.add(jean);
 
-        ouvrages.add(new Ouvrage("Titre 1", john));
+        ouvrages.add(new OuvragePapier("Titre 1", john));
         ouvrages.add(new Ouvrage("Titre 2", albertine));
         ouvrages.add(new Ouvrage("Titre 3", john));
         ouvrages.add(new Ouvrage("Titre 4", john));
