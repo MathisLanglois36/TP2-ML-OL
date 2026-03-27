@@ -1,9 +1,6 @@
 package tests;
 
-import livres.Auteur;
-import livres.Ouvrage;
-import livres.OuvragePapier;
-import livres.Pays;
+import livres.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +23,7 @@ Librairie {
         auteurs.add(jean);
 
         ouvrages.add(new OuvragePapier("Titre 1", john));
-        ouvrages.add(new Ouvrage("Titre 2", albertine));
+        ouvrages.add(new OuvrageAudio("Titre 2", albertine));
         ouvrages.add(new Ouvrage("Titre 3", john));
         ouvrages.add(new Ouvrage("Titre 4", john));
         ouvrages.add(new Ouvrage("Titre 5", albertine));
