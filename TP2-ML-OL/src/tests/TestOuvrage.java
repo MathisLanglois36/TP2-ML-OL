@@ -3,10 +3,7 @@ package tests;
 import java.time.LocalDate;
 import java.util.List;
 
-import livres.Ouvrage;
-import livres.Auteur;
-import livres.Pays;
-import livres.Serie;
+import livres.*;
 
 /**
  * CoursPOO 1
@@ -149,9 +146,9 @@ public class TestOuvrage {
         Pays etatsunis = new Pays("États-Unis", "USA");
         Auteur king = new Auteur("Stephen", "King", etatsunis);
 
-        Ouvrage it      = new Ouvrage("Ça 1", king, Ouvrage.Format.PAPIER, null, 5);
-        Ouvrage shining = new Ouvrage("Shining", king, Ouvrage.Format.PAPIER, null, 3);
-        Ouvrage misery  = new Ouvrage("Misery", king, Ouvrage.Format.PAPIER, null, 4);
+        Ouvrage it      = new OuvragePapier("Ça 1", king, Ouvrage.Format.PAPIER, null, 5);
+        Ouvrage shining = new OuvragePapier("Shining", king, Ouvrage.Format.PAPIER, null, 3);
+        Ouvrage misery  = new OuvragePapier("Misery", king, Ouvrage.Format.PAPIER, null, 4);
 
         // Créer une série
         Serie serie = new Serie("Stephen King Horreur");
