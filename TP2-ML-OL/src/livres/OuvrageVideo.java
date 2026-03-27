@@ -16,6 +16,10 @@ public class OuvrageVideo extends Ouvrage {
         this.tailleMb = tailleMb;
     }
 
+    public OuvrageVideo(String titre, Auteur auteur, Format type) {
+        super(titre,auteur, type);
+    }
+
     public int getDurerMinutes() {
         return durerMinutes;
     }
