@@ -1,7 +1,6 @@
 package tests;
 
 import livres.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,15 +22,15 @@ Librairie {
         auteurs.add(jean);
 
         ouvrages.add(new OuvragePapier("Titre 1", john));
-        ouvrages.add(new OuvrageAudio("Titre 2", albertine));
-        ouvrages.add(new Ouvrage("Titre 3", john));
-        ouvrages.add(new Ouvrage("Titre 4", john));
-        ouvrages.add(new Ouvrage("Titre 5", albertine));
-        ouvrages.add(new Ouvrage("Titre 6", john));
-        ouvrages.add(new Ouvrage("Titre 7", john));
-        ouvrages.add(new Ouvrage("Titre 8", albertine,Ouvrage.Format.VIDEO));
-        ouvrages.add(new Ouvrage("Titre 9", john,Ouvrage.Format.AUDIO));
-        ouvrages.add(new Ouvrage("Titre 10", jean));
+        ouvrages.add(new OuvragePapier("Titre 2", albertine));
+        ouvrages.add(new OuvragePapier("Titre 3", john));
+        ouvrages.add(new OuvragePapier("Titre 4", john));
+        ouvrages.add(new OuvragePapier("Titre 5", albertine));
+        ouvrages.add(new OuvragePapier("Titre 6", john));
+        ouvrages.add(new OuvragePapier("Titre 7", john));
+        ouvrages.add(new OuvrageVideo("Titre 8", albertine, Ouvrage.Format.VIDEO));
+        ouvrages.add(new OuvrageAudio("Titre 9", john, Ouvrage.Format.AUDIO));
+        ouvrages.add(new OuvragePapier("Titre 10", jean));
     }
 
     public List<Auteur> getAuteurs() {

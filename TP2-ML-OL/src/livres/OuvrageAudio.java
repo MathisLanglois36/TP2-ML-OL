@@ -15,4 +15,15 @@ public class OuvrageAudio extends Ouvrage{
         this.durerMinutes = durerMinutes;
         this.formatAudio = formatAudio;
     }
+    public OuvrageAudio(String titre, Auteur auteur, Format type) {
+        super(titre, auteur, type);
+        }
+
+    public FormatAudio getFormatAudio() {
+        return formatAudio;
+    }
+
+    public void setFormatAudio(FormatAudio formatAudio) {
+        this.formatAudio = formatAudio;
+    }
 }
