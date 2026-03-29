@@ -132,7 +132,7 @@ public class TestOuvrage {
         System.out.println("Pays invalide 2: " + p4);
         System.out.println("Pays invalide 3: " + p5);
         Auteur king = new Auteur("Stephen", "King", etatsunis);
-        
+
 
         // Test avec Auteur
         Auteur auteur = new Auteur("Albertine", "Tremblay", p1);
